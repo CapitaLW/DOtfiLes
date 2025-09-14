@@ -1,2 +1,3 @@
 # Obsidian
-myobsidiannotes
+
+Here's my obsidian notes!

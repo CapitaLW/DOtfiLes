@@ -11,7 +11,6 @@ Examples of imperialism:
 	**[[India]]**
 	**[[China]]**
 	**[[Resistance to Imperialism]]**
-	
 
 #### What is Nationalism?
 Nationalism is commonly referred to in reference to ***Patriotism*** as another term
@@ -75,6 +74,8 @@ Now, **Fascism** was really common after [[WWI]], (very, **Very** important for 
 ### Africa 
 #### [[Apartheid]]
 
+### Armenia 
+[[Armenian Genocide]]
 
 ---
 ### [[APUSH]] :(
