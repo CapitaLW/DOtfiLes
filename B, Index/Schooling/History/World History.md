@@ -36,7 +36,7 @@ indigenous people of northern Australia who share cultural traits with people of
 
 #### [[Russia - Soviet Union]]
 
-#### [[Rwanda]]
+### [[Rwanda]]
 
 ---
 
@@ -74,8 +74,6 @@ Now, **Fascism** was really common after [[WWI]], (very, **Very** important for 
 ### Africa 
 #### [[Apartheid]]
 
-### Armenia 
-[[Armenian Genocide]]
 
 ---
 ### [[APUSH]] :(

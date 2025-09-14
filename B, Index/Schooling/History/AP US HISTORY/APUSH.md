@@ -32,4 +32,3 @@
 ##### 2.4 Colonial Religion 
 [[Religion and Colonial Culture]]
 
-# Unit - 3

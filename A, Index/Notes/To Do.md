@@ -3,5 +3,3 @@
 - [ ] Another English Book report
 - [x] Rebag clothes
 - [ ] Update Obsidian notes
-- [ ] Finish Guilded
-- [ ] Finish Dune

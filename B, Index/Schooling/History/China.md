@@ -1,5 +1,5 @@
 #history
-[[Imperialism in China]] in the 1800-1900s was kinda bad.
+Imperialism in China in the 1800-1900s was kinda bad.
 
 #### Terms to know
 **Concessions:**

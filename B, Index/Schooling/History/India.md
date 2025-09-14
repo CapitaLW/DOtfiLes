@@ -1,7 +1,6 @@
 #history
 #### Important Facts
 - India became independent around 1947.
-- See: [[Imperialism  in India]]
 
 ### Before British Imperialism!
 **around 1526, Before British imperialism, Much of India had been under Mughal dynasty rule.**
