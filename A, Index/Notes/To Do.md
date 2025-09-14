@@ -1,0 +1,7 @@
+- [ ] Finish APUSH One pager 
+- [ ] English Book report
+- [ ] Another English Book report
+- [x] Rebag clothes
+- [ ] Update Obsidian notes
+- [ ] Finish Guilded
+- [ ] Finish Dune
