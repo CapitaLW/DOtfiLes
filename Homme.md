@@ -25,7 +25,7 @@ Some majors i might want to do in college are:
 ## Album of the Year:
 ### The Dark Side Of The Moon - Pink Floyd
 All under the **sun** is in tune.
-But the sun is eclipsed by the **Moon**.
+But the sun is **eclipsed** by the **Moon**.
 
 ---
 

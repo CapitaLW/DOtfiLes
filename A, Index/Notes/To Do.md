@@ -1,5 +1,3 @@
-- [ ] Finish APUSH One pager 
 - [ ] Another English Book report
 - [ ] Update Obsidian notes
-- [ ] Health Essay thing
 - [ ] 
