@@ -1,7 +1,7 @@
 ---
 aliases:
   - Canada
-  - Austra
+  - Australia
 ---
 #history
 
