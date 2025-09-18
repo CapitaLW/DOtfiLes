@@ -32,3 +32,12 @@
 ##### 2.4 Colonial Religion 
 [[Religion and Colonial Culture]]
 
+
+# Unit - 3
+
+#### Vocabulary words
+
+#### Lessons
+
+##### French and Indian
+[[French and Indian war causes and effects]]
