@@ -1,3 +1,8 @@
+---
+aliases:
+  - Canada
+  - Austra
+---
 #history
 
 

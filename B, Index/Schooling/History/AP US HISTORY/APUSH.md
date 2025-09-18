@@ -39,5 +39,5 @@
 
 #### Lessons
 
-##### French and Indian
-[[French and Indian war causes and effects]]
+##### French and Indian war
+[[French and Indian war]]

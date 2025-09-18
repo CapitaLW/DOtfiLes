@@ -1,10 +1,11 @@
 ---
 aliases:
   - France
+  - French
 tags:
   - history
+ali:
 ---
 #history 
 
-Disgusting, filthy place
-Has bread though
+
