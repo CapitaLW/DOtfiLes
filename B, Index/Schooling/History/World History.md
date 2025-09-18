@@ -70,13 +70,13 @@ Now, **Fascism** was really common after [[WWI]], (very, **Very** important for 
 #### [[Decolonization in Africa and India]]
 
 ### Song 5 in the album 'Smash' by The Offspring 
-#### [[Rwanda]]
-
+[[Rwanda]]
+[[Armenian Genocide]]
 ### Africa 
 #### [[Apartheid]]
 
 ### Armenian Genocide
-[[Armenian Genocide]]
+
 
 ---
 ### [[APUSH]] :(
