@@ -39,5 +39,9 @@
 
 #### Lessons
 
-##### French and Indian war
+##### French and Indian war (The seven years' war)
 [[French and Indian war]]
+
+#### The American Revolution
+
+
