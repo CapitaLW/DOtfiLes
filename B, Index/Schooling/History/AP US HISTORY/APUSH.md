@@ -43,5 +43,6 @@
 [[French and Indian war]]
 
 #### The American Revolution
+[[The American Revolution]]
 
 
