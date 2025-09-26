@@ -266,7 +266,7 @@ Some of the IP addresses are reserved for special purposes. These reserved IP ad
 
 ##### **What is a Localhost**
 
-**Localist** is the IP address range that specifies the device's own network address. It is used to access services running locally on the device. It is commonly known as the "127.0.0.1" IP address. However, any IP address in the range “127.0.0.1 - 127.255.255.255” can be used for this purpose. Another name is the "loopback" address.
+**Localhost** is the IP address range that specifies the device's own network address. It is used to access services running locally on the device. It is commonly known as the "127.0.0.1" IP address. However, any IP address in the range “127.0.0.1 - 127.255.255.255” can be used for this purpose. Another name is the "loop back" address.
 
 
 
