@@ -1,3 +1,0 @@
-- [ ] Another English Book report
-- [ ] Update Obsidian notes
-- [ ] 
