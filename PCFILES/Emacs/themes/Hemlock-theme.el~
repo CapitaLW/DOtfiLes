@@ -1,0 +1,30 @@
+(deftheme Hemlock
+  "Mi Own Custom Theeeeeeeeeme!! By the Tree Lord, Hemlock")
+
+;; Define and apply colors
+(let ((bg "#000000")  ;; dark background
+      (fg "#edc3b1")  ;; light foreground
+      (keyword "#f26d35")
+      (string "#9fbbf4") ;; Mouth Words
+      (comment "#757f7a") ;; Comments 
+      (function "#e8474a") ;; Non Green Fn's
+      (variable "#75d345")) ;; Variables
+  
+  ;; Custom Theming ---------
+  (custom-theme-set-faces
+   'Hemlock
+   `(default ((t (:background ,bg :foreground ,fg))))
+   `(font-lock-keyword-face ((t (:foreground ,keyword :weight bold))))
+   `(font-lock-string-face ((t (:foreground ,string))))
+   `(font-lock-comment-face ((t (:foreground ,comment :slant italic))))
+   `(font-lock-function-name-face ((t (:foreground ,function :weight bold)))) 
+   `(font-lock-variable-name-face ((t (:foreground ,variable))))
+   `(mode-line ((t (:background ,bg :foreground ,fg))))
+   `(mode-line-inactive ((t (:background ,bg :foreground ,comment))))
+   `(region ((t (:background "#ff4f00"))))
+   `(fringe ((t (:background ,bg))))))
+
+;; Non-face UI settings
+(set-fringe-mode 2)
+
+(provide-theme 'Hemlock)
