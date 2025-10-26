@@ -1,0 +1,55 @@
+{
+    "layer": "top", 
+    "height": 35, 
+    "spacing": 5, 
+
+    "modules-left": [
+        "hyprland/workspaces",
+	"hyprland/window",
+    ],
+    "modules-center": [
+    "clock"
+],
+    "modules-right": [
+        "mpd",
+        "pulseaudio",
+        "tray",
+    ],
+     "hyprland/workspaces": {
+         "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+    },
+    "hyprland/window": {
+    "format": "{title}",
+    "max-length": 50,
+},
+    "mpd": {
+        "format": "{artist} - {title} {elapsedTime:%M:%S}/ {totalTime:%M:%S} {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 5,
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "tray": {
+        "spacing": 10,
+    },
+    "clock": {
+        "format":"{:%Y %m %d  -  %H:%M}",
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{volume}% {icon}    {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", "", ""]
+}
+},
+}
+    
+
