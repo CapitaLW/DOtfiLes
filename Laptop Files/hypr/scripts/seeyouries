@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Step size for brightness change
+STEP=5
+
+# Get current brightness as percentage
+get_brightness() {
+    brightnessctl get | awk -v max=$(brightnessctl max) '{printf "%d\n", ($1/max)*100}'
+}
+
+# Change brightness based on argument
+case "$1" in
+    up)
+        brightnessctl set +${STEP}% > /dev/null
+        ;;
+    down)
+        brightnessctl set ${STEP}%- > /dev/null
+        ;;
+    *)
+        echo "Usage: $0 {up|down}"
+        exit 1
+        ;;
+esac
+
+# Get new brightness value
+BRIGHTNESS=$(get_brightness)
+
+# Pick an icon
+if [ "$BRIGHTNESS" -lt 30 ]; then
+    ICON="🌑"
+elif [ "$BRIGHTNESS" -lt 70 ]; then
+    ICON="🌓"
+else
+    ICON="🌕"
+fi
+
+# Send Dunst notification with bar
+dunstify -a "brightness" -r 9994 -u low \
+    -h int:value:"$BRIGHTNESS" \
+    -h string:hlcolor:"#FFD700" \
+    "$ICON Brightness"

@@ -1,0 +1,122 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top",
+    "spacing": 5,
+    "height": 30,
+
+    "modules-left": [
+        "hyprland/workspaces",
+	"hyprland/window"
+    ],
+    "modules-center": [
+    	"clock"
+    ],
+    "modules-right": [
+        "mpd",
+        "pulseaudio",
+	"backlight",
+        "network",
+        "cpu",
+        "memory",
+        "temperature",
+        "tray",
+        "custom/bat0",
+	"custom/bat1",
+	"custom/power"
+    ],
+     "hyprland/workspaces": {
+          "disable-scroll": true,
+          "all-outputs": true,
+          "warp-on-scroll": false,
+     },
+     
+    "mpd": {
+        "format": "{stateIcon} {artist} - {album} - {title}   {elapsedTime:%M:%S} | {totalTime:%M:%S} ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "Stopped ",
+        "interval": 5,
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+    },
+    
+    "tray": {
+        "icon-size": 21,
+        "spacing": 6,
+    },
+    
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%Y  %m %d  -  %H:%M}"
+    },
+    
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "temperature": {
+        "thermal-zone": 2,
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": [""]
+    },
+    
+    "backlight": {
+        "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    
+"custom/bat0": {
+    "format": "{}",
+    "exec": "~/.config/waybar/bat2",
+    "interval": 10,
+    "return-type": "plain"
+},
+"custom/bat1": {
+    "format": "{}",
+    "exec": "~/.config/waybar/bat1",
+    "interval": 10,
+    "return-type": "plain"
+},
+
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected ⚠",
+    },
+    
+
+
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{volume}%  {icon}   {format_source}",
+        "format-muted": "{format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "custom/power": {
+        "format" : "⏻ ",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-actions": {
+			"shutdown": "shutdown",
+			"reboot": "reboot",
+			"suspend": "systemctl suspend",
+			"hibernate": "systemctl hibernate"
+		},
+    },
+}

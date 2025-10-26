@@ -1,0 +1,149 @@
+#![enable(implicit_some)]
+#![enable(unwrap_newtypes)]
+#![enable(unwrap_variant_newtypes)]
+(
+    password: None,
+    theme: "FuryThing",
+    cache_dir: None,
+    on_song_change: ["/home/Gravl/.config/rmpc/songntf"],
+    volume_step: 5,
+    max_fps: 30,
+    scrolloff: 0,
+    wrap_navigation: true,
+    enable_mouse: false,
+    enable_config_hot_reload: true,
+    status_update_interval_ms: 1000,
+    rewind_to_start_sec: 10,
+    reflect_changes_to_playlist: false,
+    select_current_song_on_change: true,
+    browser_song_sort: [Disc, Track, Artist, Title],
+    directories_sort: SortFormat(group_by_type: true, reverse: false),
+    album_art: (
+        method: Auto,
+        max_size_px: (width: 1000, height: 1000),
+        disabled_protocols: ["http://", "https://"],
+        vertical_align: Top,
+        horizontal_align: Center,
+    ),
+    keybinds: (
+        global: {
+            ":":       CommandMode,
+            "S":       Stop,
+            "<Tab>":   NextTab,
+            "<Backspace>": PreviousTab,
+            "1":       SwitchToTab("Now Playing"),
+            "2":       SwitchToTab("Artists"),
+            "3":       SwitchToTab("Albums"),
+	    "4":       SwitchToTab("Songs"),
+            "5":       SwitchToTab("Playlists"),
+            "6":       SwitchToTab("Search"),
+            "Q":       Quit, 
+            ">":       NextTrack,
+            "<Space>": TogglePause,
+            "<":       PreviousTrack,
+            "I":       SeekForward,
+            "r":       ToggleRepeat,
+            "x":       ToggleRandom,
+            "v":       ToggleSingle,
+            "K":       SeekBack,
+            "~":       ShowHelp,
+            "u":       Update,
+            "U":       Rescan,
+            "R":       AddRandom,
+        },
+        navigation: {
+	    "<Enter>": Confirm,
+            "i":         Up,
+            "k":         Down,
+            "j":         Left,
+            "l":         Right,
+            "N":     PreviousResult,
+            "<C-n>":     NextResult,
+            "<C-j>":     UpHalf,
+            "<C-l>":     DownHalf,
+            "a":         Add,
+            "A":         AddAll,
+            "g":         Top,
+            "m":  	 Select,
+            "G":         Bottom,
+            "C-e":         MoveDown,
+            "/":         EnterSearch,
+            "<C-c>":     Close,
+            "<Esc>":     Close,
+            "C-w":         MoveUp,
+            "D":         Delete,
+
+        },
+        queue: {
+	    "<C-s>":   Save,
+            "D":       DeleteAll,
+            "a":       AddToPlaylist,
+            "d":       Delete,
+            "C":       JumpToCurrent,
+            "X":       Shuffle,
+	    "<Enter>":	 Play,
+        },
+    ),
+    search: (
+        case_sensitive: false,
+        mode: Contains,
+        tags: [
+            (value: "any",         label: "All"),
+            (value: "artist",      label: "Artist"),
+            (value: "album",       label: "Album"),
+            (value: "title",       label: "Title"),
+            (value: "filename",    label: "Filename"),
+        ],
+    ),
+    artists: (
+        album_display_mode: SplitByDate,
+        album_sort_by: Name,
+    ),
+
+tabs: [
+        (
+            name: "Now Playing",
+            pane: Split(
+	    	  direction: Horizontal,
+		  panes: [
+		  	 (
+			  size: "40%",
+                          pane: Pane(AlbumArt)
+                         ),
+			 (
+                        size: "60%",
+                        pane: Pane(Queue)
+			),
+	],
+	),
+	),
+	
+
+        (
+            name: "Artists",
+            pane: Pane(Artists),
+        ),
+	
+        (
+            name: "Albums",
+            pane: Pane(Albums),
+        ),
+	
+        (
+            name: "Songs",
+            pane: Pane(Directories),
+        ),
+	
+        (
+            name: "Playlists",
+            pane: Pane(Playlists),
+        ),
+	
+        (
+            name: "Search",
+            pane: Pane(Search),
+        ),
+	
+    ],
+
+)

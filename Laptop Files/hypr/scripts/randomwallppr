@@ -1,0 +1,28 @@
+#!/bin/bash
+
+DIR="$HOME/Pictures/Wallpapers"
+
+# Make sure directory exists
+if [ ! -d "$DIR" ]; then
+    echo "Wallpaper directory missing: $DIR"
+    exit 1
+fi
+
+while true; do
+    # Kill old hyprpaper
+    pkill hyprpaper 2>/dev/null
+
+    # Start hyprpaper
+    hyprpaper &
+    sleep 0.5  # wait for socket
+
+    # Loop over monitors
+    for MON in $(hyprctl monitors | awk '{print $2}'); do
+        RANDOM_WALL=$(find "$DIR" -type f | shuf -n 1)
+        hyprctl hyprpaper preload "$RANDOM_WALL"
+        hyprctl hyprpaper wallpaper "$MON,$RANDOM_WALL"
+        echo "Set $RANDOM_WALL on $MON"
+    done
+
+    sleep 900
+done

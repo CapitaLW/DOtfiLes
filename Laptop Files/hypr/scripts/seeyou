@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Amount to change volume by
+STEP=5
+
+# Get current volume (0-100)
+get_volume() {
+    wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2*100)}'
+}
+
+# Change volume based on argument
+case "$1" in
+    up)
+        wpctl set-volume @DEFAULT_AUDIO_SINK@ $STEP%+ > /dev/null
+        ;;
+    down)
+        wpctl set-volume @DEFAULT_AUDIO_SINK@ $STEP%- > /dev/null
+        ;;
+    mute)
+        wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+        ;;
+    *)
+        echo "Usage: $0 {up|down|mute}"
+        exit 1
+        ;;
+esac
+
+# Get new volume and mute status
+VOLUME=$(get_volume)
+MUTED=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo "yes" || echo "no")
+
+# Choose icon
+if [ "$MUTED" = "yes" ]; then
+    ICON="🔇"
+else
+    if [ "$VOLUME" -lt 30 ]; then
+        ICON="🔈"
+    elif [ "$VOLUME" -lt 70 ]; then
+        ICON="🔉"
+    else
+        ICON="🔊"
+    fi
+fi
+
+# Send notification with progress bar
+dunstify -a "volume" -r 9993 -u low \
+    -h int:value:$VOLUME \
+    -h string:hlcolor:"#00FF00" \
+    "$ICON Volume"
