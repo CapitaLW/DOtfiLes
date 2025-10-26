@@ -215,8 +215,8 @@
 
 ;; Move around like Vim but without modes
 (global-set-key (kbd "C-h") 'backward-char)
-(global-set-key (kbd "C-k") 'next-line)
-(global-set-key (kbd "C-j") 'previous-line)
+(global-set-key (kbd "C-j") 'next-line)
+(global-set-key (kbd "C-k") 'previous-line)
 (global-set-key (kbd "C-l") 'forward-char)
  
 ;; Word and line navigation
