@@ -105,7 +105,7 @@
   :config
   (dashboard-setup-startup-hook))
 
-;; xDisable line numbers on the dashboard
+;; Disable line numbers on the dashboard
 (add-hook 'dashboard-mode-hook (lambda () (display-line-numbers-mode 0)))
 
 (add-hook 'server-after-make-frame-hook
