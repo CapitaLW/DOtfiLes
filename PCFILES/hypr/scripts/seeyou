@@ -1,0 +1,3 @@
+# Example script: volume_notify.sh
+VOLUME=$(pamixer --get-volume)  # or your volume command
+notify-send -u low -r 1 -i audio-volume-high "Volume" "$VOLUME%"
