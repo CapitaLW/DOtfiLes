@@ -1,0 +1,3 @@
+if [ "$cat /sys/class/power_supply/BAT0/capacity" > 30 ]; then
+notify-send -r 1910 -u critical "Battery Low" "$(cat /sys/class/power_supply/BAT0/capacity)%"
+fi
