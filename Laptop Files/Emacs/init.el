@@ -205,23 +205,3 @@
 
 (use-package magit
   :ensure t)
-
-
-;;------------------------------------------------------
-;; Shamelessy copying Neovim (Neovim is a filthy application filthy application)
-;;------------------------------------------------------
-
-;; HJKL Ripoff
-
-;; Move around like Vim but without modes
-(global-set-key (kbd "C-h") 'backward-char)
-(global-set-key (kbd "C-j") 'next-line)
-(global-set-key (kbd "C-k") 'previous-line)
-(global-set-key (kbd "C-l") 'forward-char)
- 
-;; Word and line navigation
-(global-set-key (kbd "M-h") 'backward-word)
-(global-set-key (kbd "M-l") 'forward-word)
-(global-set-key (kbd "C-S-h") 'beginning-of-line)
-(global-set-key (kbd "C-S-l") 'end-of-line)
-
